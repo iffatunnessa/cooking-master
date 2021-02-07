@@ -23,6 +23,10 @@ form .col-6{
     background-position: center;
     object-fit: cover;
 }
+i.fa-search{
+    padding-top: 20px;
+    background-color: none;
+}
 ul.ingredients{
     list-style-type: none;
 }
