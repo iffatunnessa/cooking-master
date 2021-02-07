@@ -24,7 +24,7 @@ form .col-6{
     object-fit: cover;
 }
 .fa-search{
-    margin-top: 20px;
+    padding-top: 20px;
 }
 ul.ingredients{
     list-style-type: none;
