@@ -23,7 +23,7 @@ form .col-6{
     background-position: center;
     object-fit: cover;
 }
-i.fa-search{
+.fa-search{
     padding-top: 20px;
 }
 ul.ingredients{
