@@ -14,17 +14,17 @@ form .col-6{
 }
 #food-ingredients{
     display: none;
+    padding: 30px;
 }
 #ingredient-img{
     height: 300px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    object-fit: cover;
 }
 ul.ingredients{
     list-style-type: none;
-    margin: 0;
-    padding:0;
 }
 .form-check-input{
     padding-right: 5px;

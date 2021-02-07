@@ -11,7 +11,6 @@ const clickSearch = () => {
         foodIngredients.style.display = "none";
     }
     else{
-        console.log(searchInput.value);
         fetchBySearch();
         showDiv.innerHTML="";
         foodIngredients.style.display = "none";
@@ -28,6 +27,8 @@ const fetchBySearch =  () => {
 }
 
 const searchFood =(data) =>{
+    
+    console.log(data.meals);
     if(data.meals == undefined || data.meals == null){
         const msg = `<i class="fas fa-exclamation-triangle"></i> Nothing has been found!`;
         errorMsg.innerHTML = msg;
@@ -56,28 +57,20 @@ const searchFood =(data) =>{
                         <div class="card-body p-5">
                             <h4 class="card-title">${element.strMeal}</h4>
                             <h6 class="ingredient-header pt-3 pb-3">Ingredients</h6>
-                            <ul class="ingredients">
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure1} ${element.strIngredient1}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure2} ${element.strIngredient2}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure3} ${element.strIngredient3}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure4} ${element.strIngredient4}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure5} ${element.strIngredient5}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure6} ${element.strIngredient6}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure7} ${element.strIngredient7}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure8} ${element.strIngredient8}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure9} ${element.strIngredient9}</li>
-                                <li><input class="form-check-input" type="checkbox" value=""
-                                        id="flexCheckDefault">&nbsp;${element.strMeasure10} ${element.strIngredient10}</li>
-                            </ul>
+                            <div class="ingredients form-check" id="ingredient-list">
+                                <div><input class="form-check-input" type="checkbox" id="ing-1">&nbsp;
+                                <label for="ing-1">${element.strMeasure1} ${element.strIngredient1}</label></li>
+                                <div><input class="form-check-input" type="checkbox" id="ing-2">&nbsp;
+                                <label  for="ing-2">${element.strMeasure2} ${element.strIngredient2}</label></div>
+                                <div><input class="form-check-input" type="checkbox" id="ing-3">&nbsp;
+                                <label  for="ing-3">${element.strMeasure3} ${element.strIngredient3}</label></div>
+                                <div><input class="form-check-input" type="checkbox" id="ing-4">&nbsp;
+                                <label  for="ing-4">${element.strMeasure4} ${element.strIngredient4}</label></div>
+                                <div><input class="form-check-input" type="checkbox" id="ing-5">&nbsp;
+                                <label  for="ing-5">${element.strMeasure5} ${element.strIngredient5}</label></div>
+                                <div><input class="form-check-input" type="checkbox" id="ing-6">&nbsp;
+                                <label  for="ing-6">${element.strMeasure6} ${element.strIngredient6}</label></div>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -86,5 +79,5 @@ const searchFood =(data) =>{
             });
         });
     }
-    
 }
+
