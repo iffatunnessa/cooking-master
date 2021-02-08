@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!--Nav Bar-->
     <nav class="container navbar navbar-expand-lg navbar-light .bg-transparent">
         <div class="container-fluid mt-4">
             <nav class="navbar navbar-light .bg-transparent">
@@ -39,7 +40,9 @@
             </div>
         </div>
     </nav> 
+    
     <main class="container">
+        <!--Search Bar-->
         <div class=row>
             <div id="input-div" class="col-6 position-relative">
                 <div class="input-group p-4 top-0 start-100 translate-middle-x">
@@ -50,11 +53,14 @@
                 </div>
             </div>
         </div>
+        <!--Error Message-->
         <div id="error-msg" class="alert alert-light col-6 top-0 start-50 translate-middle-x p-4" role="alert"></div>
+        <!--Ingredient Div-->
         <div id="food-ingredients" class="row">
             <div id="ingredient-div" class="col-6 w-2 position-relative">
             </div>
         </div>
+        <!--Food cards found in Search-->
         <div class="row row-cols-1 row-cols-md-4" id="show"></div>
     </main>
     <script src="script.js"></script>
@@ -62,6 +68,5 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
 
